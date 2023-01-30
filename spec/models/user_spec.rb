@@ -106,6 +106,8 @@ RSpec.describe User, type: :model do
     expect(user).to_not be_valid
    end
 
+   
+
   end
 
   describe '.authenticate_with_credentials' do
@@ -121,6 +123,29 @@ RSpec.describe User, type: :model do
       expect(authenticate).to eq(user)
     end
    
+    it "should be a valid email address if space is added" do
+      user = User.create(
+        first_name: 'first_name',
+        last_name: 'last_name',
+        email: 'test2@test.com',
+        password: 'password',
+     password_confirmation: 'password'
+      )
+      authenticate = User.authenticate_with_credentials('test2@test.com ', user.password)
+      expect(authenticate).to eq(user)
+    end
+
+    it "should have a valid email address regardless of case" do
+      user = User.create(
+        first_name: 'first_name',
+        last_name: 'last_name',
+        email: 'test2@test.com',
+        password: 'password',
+     password_confirmation: 'password'
+      )
+      authenticate = User.authenticate_with_credentials('TEST2@test.COM', user.password)
+      expect(authenticate).to eq(user)
+    end
   end
 
 end
