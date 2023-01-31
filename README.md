@@ -6,7 +6,13 @@ A mini e-commerce application built with Rails 6.1 for purposes of teaching Rail
 ## Project Screenshots
 
 ### Home Page
-![Jungle Home Page]
+![Jungle Home Page](https://github.com/EbeleOTelus/jungle-rails/blob/master/docs/Jungle%20home.PNG?raw=true)
+
+### Sign Up Page
+![Jungle SignUp](https://github.com/EbeleOTelus/jungle-rails/blob/master/docs/Jungle%20Signup.PNG?raw=true)
+
+### Shopping Cart Page
+![Jungle Cart](https://github.com/EbeleOTelus/jungle-rails/blob/master/docs/Jungle%20cart.PNG?raw=true)
 
 
 ## Setup
